@@ -11,6 +11,31 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.TradeBots.Rob", "Mar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.TradeBots.Anonymous", "Market.TradeBots.Anonymous\Market.TradeBots.Anonymous.csproj", "{742CBF2C-4BC7-46F7-9D70-D53314FD1E1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Trading.Robinhood", "Market.Trading.Robinhood\Market.Trading.Robinhood.csproj", "{E2AB8E73-20D7-4D60-9B48-3CA2CCD94A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Query.PolygonIo", "Market.Query.PolygonIo\Market.Query.PolygonIo.csproj", "{C8CC87A5-74D3-43B7-B3A1-13F41A4B5FF8}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "wwwroot", "Market.Service\wwwroot\", "{781F0747-456B-4831-8CF8-E728482325ED}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50419"
+		Debug.AspNetCompiler.PhysicalPath = "Market.Service\wwwroot\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50419\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50419"
+		Release.AspNetCompiler.PhysicalPath = "Market.Service\wwwroot\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50419\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50419"
+		SlnRelativePath = "Market.Service\wwwroot\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +58,18 @@ Global
 		{742CBF2C-4BC7-46F7-9D70-D53314FD1E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{742CBF2C-4BC7-46F7-9D70-D53314FD1E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{742CBF2C-4BC7-46F7-9D70-D53314FD1E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2AB8E73-20D7-4D60-9B48-3CA2CCD94A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AB8E73-20D7-4D60-9B48-3CA2CCD94A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AB8E73-20D7-4D60-9B48-3CA2CCD94A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AB8E73-20D7-4D60-9B48-3CA2CCD94A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CC87A5-74D3-43B7-B3A1-13F41A4B5FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CC87A5-74D3-43B7-B3A1-13F41A4B5FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CC87A5-74D3-43B7-B3A1-13F41A4B5FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CC87A5-74D3-43B7-B3A1-13F41A4B5FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781F0747-456B-4831-8CF8-E728482325ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781F0747-456B-4831-8CF8-E728482325ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781F0747-456B-4831-8CF8-E728482325ED}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{781F0747-456B-4831-8CF8-E728482325ED}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

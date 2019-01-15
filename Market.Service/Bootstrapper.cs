@@ -38,7 +38,7 @@ namespace Market.Service
             if (Debugger.IsAttached || Environment.UserInteractive)
             {
                 _isDebuggerAttached = true;
-                _wwwRootParentPath = $@"{Directory.GetCurrentDirectory()}\..\..\";
+                _wwwRootParentPath = $@"{Directory.GetCurrentDirectory()}\..\..\..\";
             }
             else
             {

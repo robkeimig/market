@@ -1,18 +1,18 @@
-﻿using Market.Execution;
-using Market.Query;
+﻿using Market.Query;
 using Market.Repositories;
+using Market.Trading;
 
 namespace Market.Rules
 {
     public partial class Rule
     {
         private readonly ISymbolRepository _symbolRepository;
-        private readonly IExecutionService _executionService;
+        private readonly ITradingService _executionService;
         private readonly IQueryService _queryService;
 
         public Rule(
             ISymbolRepository symbolRepository,
-            IExecutionService executionService,
+            ITradingService executionService,
             IQueryService queryService)
         {
             _symbolRepository = symbolRepository;

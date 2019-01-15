@@ -1,5 +1,4 @@
 ﻿using System;
-using Market.Execution;
 using Market.Query;
 using Market.Trading;
 
@@ -8,12 +7,12 @@ namespace Market.TradeBots.Anonymous
     public class AnonymousTradeBot : ITradeBot
     {
         private readonly IQueryService _queryService;
-        private readonly IExecutionService _executionService;
+        private readonly ITradingService _tradingService;
 
-        public AnonymousTradeBot(IQueryService queryService, IExecutionService executionService)
+        public AnonymousTradeBot(IQueryService queryService, ITradingService tradingService)
         {
             _queryService = queryService;
-            _executionService = executionService;
+            _tradingService = tradingService;
         }
 
         public void Start()
