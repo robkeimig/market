@@ -6,7 +6,6 @@ namespace Market.Rules
     {
         public async Task LoadHistoricalDataAsync()
         {
-
         }
     }
 }

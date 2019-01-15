@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market", "Market\Market.csproj", "{92CFF52C-0BC7-43D9-8B03-B12B42B012F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Service", "Market.Service\Market.Service.csproj", "{A95F88E6-383D-4CE3-9E2B-96CD2864C635}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Service", "Market.Service\Market.Service.csproj", "{A95F88E6-383D-4CE3-9E2B-96CD2864C635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.TradeBots.Rob", "Market.TradeBots.Rob\Market.TradeBots.Rob.csproj", "{BBAA1986-C2CD-4E4A-8456-765485CC3AFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.TradeBots.Rob", "Market.TradeBots.Rob\Market.TradeBots.Rob.csproj", "{BBAA1986-C2CD-4E4A-8456-765485CC3AFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.TradeBots.Anonymous", "Market.TradeBots.Anonymous\Market.TradeBots.Anonymous.csproj", "{742CBF2C-4BC7-46F7-9D70-D53314FD1E1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.TradeBots.Anonymous", "Market.TradeBots.Anonymous\Market.TradeBots.Anonymous.csproj", "{742CBF2C-4BC7-46F7-9D70-D53314FD1E1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,10 +2,15 @@
 using System.Diagnostics;
 using System.IO;
 using System.Security.Principal;
-using Microsoft.AspNetCore.Hosting.WindowsServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.WindowsServices;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+using Swashbuckle.AspNetCore.Swagger;
 using Market.Logging;
 
 namespace Market.Service
@@ -43,6 +48,35 @@ namespace Market.Service
 
             var bindUrl = GetHttpSysBindUrl(InternalUrl);
             AddUrlAcl(bindUrl);
+
+            _webHost = new WebHostBuilder()
+               .ConfigureServices(sc => BuildContainer(sc))
+               .UseHttpSys(options =>
+               {
+                   options.UrlPrefixes.Add(bindUrl);
+               })
+               .UseContentRoot(_wwwRootParentPath)
+               .UseStartup<ApiStartup>()
+               .Build();
+        }
+
+        private void BuildContainer(IServiceCollection sc)
+        {
+            sc.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                options.SerializerSettings.Formatting = Formatting.Indented;
+            });
+
+            sc.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(ApiVersion, new Info { Title = ApiName, Version = ApiVersion });
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var xmlPath = Path.Combine(basePath, ApiXmlDocumentPath);
+                c.IncludeXmlComments(xmlPath);
+            });
+
+            //Build DI graph
         }
 
         internal void StartService()
