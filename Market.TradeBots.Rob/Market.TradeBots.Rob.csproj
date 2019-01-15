@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Schema\Migrations\1.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Schema\Migrations\1.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Schema\Tables\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Market\Market.csproj" />
+  </ItemGroup>
+
+</Project>
